@@ -1,0 +1,80 @@
+main {
+  grid-template-rows: 0.4fr 1fr 0.3fr 0.7fr;
+}
+/* Services Container */
+.services-container {
+  grid-template-areas:
+    "title title title title"
+    "service-1 service-1 service-2 service-2"
+    "service-3 service-3 service-3 service-3";
+}
+@media only screen and (max-width: 700px) {
+  .services-container {
+    grid-template-areas:
+      "title"
+      "service-1"
+      "service-2"
+      "service-3";
+  }
+
+  main {
+    grid-template-rows: 0.4fr 1fr 0.5fr 0.5fr;
+  }
+  .client-container {
+    padding: 15px;
+    grid-template-areas:
+      "title-client title-client title-client"
+      "client-1 client-2 client-3"
+      " client-4 client-5 client-6";
+  }
+
+  .upper-sec-sontainer {
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  main {
+    grid-template-rows: 0.5fr 1fr 0.5fr 0.51fr;
+  }
+  .client-container {
+    grid-template-areas:
+      "title-client title-client"
+      "client-1 client-2 "
+      "client-3 client-4"
+      "client-5 client-6";
+  }
+  .client-container img {
+    display: block;
+    margin: auto;
+  }
+  .header-container {
+    flex-direction: column;
+  }
+  .logo img {
+    width: 15%;
+  }
+  nav > ul {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  .clients img {
+    width: 40%;
+  }
+  .navbar a {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  nav > ul {
+    flex-wrap: wrap;
+  }
+  .navbar a {
+    padding: 4px;
+  }
+
+  .upper-sec-sontainer {
+    width: 90vw;
+  }
+}
